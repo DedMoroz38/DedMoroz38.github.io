@@ -586,10 +586,9 @@ body {
 
 .application__title-box {
   --g: #000, #0000 1deg 179deg,#000 180deg;
-  --mask:
-      conic-gradient(from -225deg at bottom 35px left  35px,var(--g)) 0    100%/100% 100% no-repeat;
+  --mask: conic-gradient(from -225deg at bottom 35px left  35px,var(--g)) 0    100%/100% 100% no-repeat;
   -webkit-mask: var(--mask);
-  mask: var(--mask);
+          mask: var(--mask);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -638,7 +637,7 @@ body {
   --mask:
     conic-gradient(from -45deg at top    35px right 35px,var(--g)) 100% 0   /100% 100% no-repeat;
   -webkit-mask: var(--mask);
-  mask: var(--mask);
+          mask: var(--mask);
   background: #F4F4F4;
   width: 700px;
   display: -webkit-box;
@@ -861,7 +860,7 @@ body {
           conic-gradient(from -45deg at top    25px right 25px,var(--g)) 100% 0   /51% 100% no-repeat,
           conic-gradient(from -225deg at bottom 25px left  25px,var(--g)) 0    100%/51% 100% no-repeat;
   -webkit-mask: var(--mask);
-  mask: var(--mask);
+          mask: var(--mask);
 }
 
 .contact__items {
@@ -1090,7 +1089,7 @@ body {
   display: none;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .container {
     max-width: 280px;
   }
@@ -1318,6 +1317,8 @@ body {
     display: none;
   }
   .application__title-box {
+    -webkit-mask: none;
+            mask: none;
     width: auto;
     height: 80px;
     -webkit-box-orient: horizontal;
@@ -1343,6 +1344,8 @@ body {
   .application__form {
     padding: 25px 20px 50px 20px;
     width: auto;
+    -webkit-mask: none;
+            mask: none;
   }
   .application__form-subtitles {
     font-size: 14px;
@@ -1425,17 +1428,28 @@ body {
   }
   .navigation__links {
     font-size: 18px;
+    margin-bottom: 25px;
+    width: 280px;
+  }
+  .navigation__links:last-of-type {
+    margin-bottom: 32px;
+  }
+  .footer {
+    margin-top: 50px;
   }
   .footer-bar {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: auto;
+    margin-top: 0;
   }
   .telephone_model {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: 19px;
   }
   .icon {
     display: -webkit-box;
@@ -1445,6 +1459,21 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  .first_links {
+    margin-bottom: 0;
+  }
+  .mainIconImage {
+    position: static;
+  }
+  .contact__items-container2 {
+    --g: #000, #0000 1deg 179deg,#000 180deg;
+    --mask:
+    conic-gradient(from -135deg at top    20px left  20px,var(--g)) 0    0   /51% 100% no-repeat,
+    conic-gradient(from 45deg at bottom 20px right 20px,var(--g)) 100% 100%/51% 100% no-repeat;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
   }
 }
 /*# sourceMappingURL=style.css.map */
