@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="modalwindow.js" defer ></script>
     <script src="select.js" defer ></script>
+    <script src="insertmap.js" defer ></script>
+    <script src="menu.js" defer ></script>
 </head>
 <body>
     <div class="top">
@@ -29,9 +31,25 @@
                     <div class="model_telephone__box">
                         <img src="./images/index/phone/miniPhone.svg" alt="">
                     </div>
-                    <div class="model_telephone__box model_telephone__box2">
-                        <img src="./images/index/newicon.svg" alt="">
-                    </div>
+                    <details class="model_telephone__box model_telephone__box2">
+                        <summary class="menu__summary">
+                            <!-- <img src="./images/index/newicon.svg" alt=""> -->
+                        </summary>
+                        <div class="modal_menu_box">
+                            <div class="container">
+                                <nav class="navigation navigation-footer navigation-menu">
+                                    <div class="first_links">
+                                        <a href="" class="navigation__links">Дизайн</a>
+                                        <a href="" class="navigation__links">Планировки площадей в аренду</a>
+                                        <a href="" class="navigation__links">Планировки инфраструктуры</a>
+                                        <a href="" class="navigation__links">Контакты</a>
+                                    </div>
+                                    <a href="" class="navigation__links">Политика конфидециальности</a>
+                                </nav>
+                                <a href="" class="about__button about__button_active">Стать Резидентом</a>
+                            </div>
+                        </div>
+                    </details>
                 </div>
             </div>
         </div>
@@ -223,9 +241,8 @@
         </div>
     </div>
     <div class="map">
-        
+        <script class="map" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9a4aecddd27f0d1f4459de5beb034329254c0c79b14ba7561fb2109d0fb70b5e&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
     </div>
-    <!-- <script class="map" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9a4aecddd27f0d1f4459de5beb034329254c0c79b14ba7561fb2109d0fb70b5e&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script> -->
     <div class="footer">
         <div class="container">
             <div class="footer-bar">
