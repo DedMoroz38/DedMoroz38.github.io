@@ -1103,6 +1103,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 161px;
   }
   .icon > img {
     width: 34px;
@@ -1144,7 +1145,7 @@ body {
   }
   .header {
     height: 820px;
-    margin-top: 33px;
+    margin-top: 0;
   }
   .about {
     display: -webkit-box;
@@ -1474,6 +1475,12 @@ body {
     conic-gradient(from 45deg at bottom 20px right 20px,var(--g)) 100% 100%/51% 100% no-repeat;
     -webkit-mask: var(--mask);
     mask: var(--mask);
+  }
+  .top-bar {
+    margin-top: 20px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
 /*# sourceMappingURL=style.css.map */
