@@ -43,5 +43,8 @@ function changeButtonsDisplay(id){
     allButtons[currentForm].children[1].classList.remove('main__menu-button-name-active');
     allButtons[id].children[1].classList.add('main__menu-button-name-active');
     allButtons[id].children[0].classList.add('main__menu-button-number_active');
-    window.scrollTo(0, 400);
+    window.scrollTo({
+        top: 300,
+        behavior: "smooth"
+    });
 }

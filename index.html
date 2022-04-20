@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./choices.min.css">
+    <script src="choices.min.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/RobinHerbots/Inputmask@5.0.3/dist/jquery.inputmask.min.js"></script>
     <script defer src="https://unpkg.com/imask"></script>
     <script src="mask.js" defer></script>
     <script src="main.js" defer></script>
@@ -93,32 +97,29 @@
                         <p class="main__form-subtitle">Мобильный телефон</p>
                         <input placeholder="+7(895) 343-34-56" id="phone-mask" type="text" class="main__form-input">
                         <p class="main__form-subtitle">Электронная почта</p>
-                        <input placeholder="ivanivanovich@mail.ru" type="text" class="main__form-input main__form-input_last">
+                        <input id="mailSecond" placeholder="ivanivanovich@mail.ru" type="text" class="main__form-input main__form-input_last">
                         <button class="main__form-submit-button" id="0">ДАЛЕЕ</button>
                         <a href="" class="main__form-criteria">Первичные критерии отбора</a>
                     </form>
                     <form action="" class="main__form-box_2 main__form-box display-none" name="form" id="1">
                         <p class=" main__form-heading">2. ВАРИАНТЫ СОТРУДНИЧЕСТВА</p>
-                        <div class="custom-select" id="0">
-                            <select autofocus id="select" class="select-box">
-                                <option value="0">Поиск инвестиций (средства на развитие)</option>
-                                <option value="1">Предоставление продуктов для использования на условиях роялти</option>
-                                <option value="2">Продажа проекта/технологии</option>
-                                <option value="3">Поиск нефинансовых ресурсов (компетенций)</option>
-                            </select>
-                            <img src="./images/selectArrow.svg" alt="" class="main__selector-arrow">
-                        </div>
-                        <p class="main__form-subtitle">Область компетенций</p>
-                        <div class="custom-select" id="3">
-                            <select autofocus class="select-box">
-                                <option value="0">производственные услуги (производство продукта, логистика)</option>
+                        <select name="" id="0" class="default">
+                            <option value="">Поиск инвестиций (средства на развитие)</option>
+                            <option value="0">Предоставление продуктов для использования на условиях роялти</option>
+                            <option value="1">Продажа проекта/технологии</option>
+                            <option value="2">Поиск инвестиций (средства на развитие)</option>
+                            <option value="3">Поиск нефинансовых ресурсов (компетенций)</option>
+                        </select>
+                       <div class="selection_box display-none">
+                            <p class="main__form-subtitle">Область компетенций</p>
+                            <select name="" id="1" class="default">
+                                <option value="">Производственные услуги (производство продукта, логистика)</option>
                                 <option value="1">индустриальный партнер в получении финансирования от государства (составление бизнес-плана)</option>
                                 <option value="2">сервис (ОПИ, сопровождение)</option>
                                 <option value="3">каналы продаж</option>
                                 <option value="4">лабораторная база (отраслевые испытания, масштабирование, аналитика и составление методик тестирования / определения продукта)</option>
-                            </select>
-                            <img src="./images/selectArrow.svg" alt="" class="main__selector-arrow">
-                        </div>
+                            </select> 
+                       </div>                       
                         <p class="main__form-subtitle">Другое</p>
                         <input placeholder="Введите свой вариант сотрудничества" type="text" class="main__form-input main__form-input_last">
                         <button class="main__form-submit-button" id="1">ДАЛЕЕ</button>
@@ -148,23 +149,21 @@
                         <label class="main__form-idea-checkbox-container main__form-idea-checkbox-container_2">
                             <input class="main__submition-radio-input" name="check" type="radio">
                             <span class="main__submition-radio-tick"></span>
-                            <p class="main__form-idea-checkbox-name">НИОКР</p>
+                            <p class="main__form-idea-checkbox-name">Продажи/стадия наращения мощности производства</p>
                         </label>
                         <p class="main__form-subtitle main__form-subtitle_2">Уровень готовности технологии</p>
-                        <div class="custom-select custom-select_2" id="1">
-                            <select class="select-box">
-                            <option value="0">УГТ1: Основные принципы технологии изучены и опубликованы;</option>
-                            <option value="1">УГТ2: Концепция технологии и/или ее применения сформулированы;</option>
-                            <option value="2">УГТ3: Критические функции и/или характеристики подтверждены аналитическим и экспериментальным путем;</option>
-                            <option value="3">УГТ4: Компонент и/или макет испытаны в лабораторном окружении;</option>
-                            <option value="4">УГТ5: Компонент и/или макет испытаны в окружении, близком к реальному;</option>
-                            <option value="5">УГТ6: Модель системы/подсистемы или прототип продемонстрированы в окружении, близком к реальному;</option>
-                            <option value="6">УГТ7: Прототип системы продемонстрирован в условиях эксплуатации;</option>
-                            <option value="7">УГТ8: Реальная система завершена и квалифицирована в ходе испытаний и демонстрации;</option>
-                            <option value="8">УГТ9: Реальная система подтверждена путем успешной эксплуатации (достижения цели).</option>
-                            </select>
-                            <img src="./images/selectArrow.svg" alt="" class="main__selector-arrow">
-                        </div>
+                        <select name="" id="0" class="default">
+                            <option value="">Основные принципы технологии изучены и опубликованы</option>
+                            <option value="1">УГТ1: Основные принципы технологии изучены и опубликованы;</option>
+                            <option value="2">УГТ2: Концепция технологии и/или ее применения сформулированы;</option>
+                            <option value="3">УГТ3: Критические функции и/или характеристики подтверждены аналитическим и экспериментальным путем;</option>
+                            <option value="4">УГТ4: Компонент и/или макет испытаны в лабораторном окружении;</option>
+                            <option value="5">УГТ5: Компонент и/или макет испытаны в окружении, близком к реальному;</option>
+                            <option value="6">УГТ6: Модель системы/подсистемы или прототип продемонстрированы в окружении, близком к реальному;</option>
+                            <option value="7">УГТ7: Прототип системы продемонстрирован в условиях эксплуатации;</option>
+                            <option value="8">УГТ8: Реальная система завершена и квалифицирована в ходе испытаний и демонстрации;</option>
+                            <option value="9">УГТ9: Реальная система подтверждена путем успешной эксплуатации (достижения цели).</option>
+                        </select>
                         <p class="main__form-subtitle main__form-subtitle_3">Наличие объектов интеллектуальной собственности (патенты, свидетельства)</p>
                         <div class="main__switch-box">
                             <p class="main__switch-text">Нет</p>
@@ -179,25 +178,11 @@
                             <input placeholder="" type="text" class="main__form-input main__form-input_2">
                         </div>
                         <p class="main__form-subtitle main__form-subtitle_2">Законтрактованность</p>
-                        <div class="custom-select custom-select_3" id="2">
-                            <select class="select-box">
-                            <option value="0">Нет заключенных контрактов</option>
-                            <option value="1">Прототип системы продемонстрирован в условиях эксплуатации</option>
-                            <option value="2">Компонент и/или макет испытаны в окружении, близком к реальному</option>
-                            <option value="3">Критические функции и/или характеристики подтверждены
-                                аналитическим и экспериментальным путем</option>
-                            <option value="4">Компонент и/или макет испытаны в лабораторном окружении</option>
-                            <option value="5">Реальная система подтверждена путем успешной эксплуатации
-                                (достижения цели)</option>
-                            <option value="6">Реальная система завершена и квалифицирована в ходе испытаний
-                                и демонстрации</option>
-                            <option value="7">Прототип системы продемонстрирован в условиях эксплуатации</option>
-                            <option value="8">Модель системы/подсистемы или прототип продемонстрированы
-                                в окружении, близком к реальному</option>
-                            <option value="9">Концепция технологии и/или ее применения сформулированы</option>
-                            </select>
-                            <img src="./images/selectArrow.svg" alt="" class="main__selector-arrow">
-                        </div>
+                        <select name="" id="0" class="default">
+                            <option value="">Нет заключенных контрактов</option>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                        </select>
                         
                         <button class="main__form-submit-button" id="2">ДАЛЕЕ</button>
                     </form>
