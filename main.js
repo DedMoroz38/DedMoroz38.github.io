@@ -48,3 +48,9 @@ function changeButtonsDisplay(id){
         behavior: "smooth"
     });
 }
+setTimeout(() => {
+    let cd = document.querySelectorAll(".choices__list--dropdown").forEach(el => {
+        el.firstChild.firstChild.classList.add("display-none");
+    });
+    console.log(cd);
+}, 1000);

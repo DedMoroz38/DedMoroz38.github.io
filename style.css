@@ -1183,18 +1183,6 @@ input:checked + .slider:before {
   opacity: 0 !important;
 }
 
-#choices--0-item-choice-1 {
-  display: none;
-}
-
-#choices--1-item-choice-4 {
-  display: none;
-}
-
-#choices--0-item-choice-3 {
-  display: none;
-}
-
 .choices[data-type*=select-one]::after {
   content: url("./images/selectArrow.svg") !important;
   right: 35px !important;
@@ -1206,11 +1194,7 @@ input:checked + .slider:before {
   content: url("./images/selectArrow2.svg") !important;
 }
 
-.media-box {
-  border: 1px solid #000;
-}
-
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .container {
     max-width: 280px;
     padding: 0;
@@ -1248,7 +1232,6 @@ input:checked + .slider:before {
     margin-top: 32px;
   }
   .main__box {
-    border: 1px solid #000;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1263,9 +1246,9 @@ input:checked + .slider:before {
     width: 100%;
   }
   .main__menu {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 280px;
     overflow-x: scroll;
     -webkit-box-orient: horizontal;
@@ -1313,13 +1296,19 @@ input:checked + .slider:before {
     width: 275px;
     font-size: 14px;
     line-height: 17px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
   .main__form-criteria {
     left: 0;
     top: 123px;
     font-size: 12px;
     line-height: 15px;
+    display: none;
+  }
+  .main__form-criteria_2 {
+    position: static;
+    display: block;
+    margin-bottom: 32px;
   }
   .main__form-subtitle {
     font-size: 14px;
@@ -1374,26 +1363,19 @@ input:checked + .slider:before {
   .main__switch-box {
     margin-bottom: 32px;
   }
-  .custom-select {
+  .choices {
+    margin-bottom: 24px !important;
+    width: 280px;
+  }
+  .choices__inner {
     width: 100%;
-    margin-bottom: 24px;
-  }
-  .custom-select_2 {
-    margin-bottom: 24px;
-  }
-  .custom-select_3 {
-    margin-bottom: 0;
-  }
-  .select-box {
-    width: 100%;
-  }
-  .select-items div, .select-selected {
     height: 49px;
-    width: 100%;
   }
-  .select-items {
-    height: 49px;
-    width: 100%;
+  .choices__list--single {
+    width: 240px;
+  }
+  .choices__item--selectable {
+    width: 240px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
