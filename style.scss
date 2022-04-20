@@ -12,6 +12,7 @@ input:focus{
 .container {
     max-width: 1170px;
     margin: 0 auto;
+    padding: 1%;
 }
 .top{
     height: 338px;
@@ -201,6 +202,10 @@ input:focus{
         background: transparent;
         margin-bottom: 40px;
         cursor: pointer;
+        color: #666666;
+    }
+    &__menu-button:hover{
+        color: #333333;
     }
     &__menu-button:last-of-type{
         margin-bottom: 0;
@@ -213,6 +218,10 @@ input:focus{
         width: 36px;
         height: 36px;
         border-radius: 50%;
+        &_active{
+            border: 1px solid #ED1D25;
+            color: #ED1D25;
+        }
     }
     &__menu-button-name {
         width: 124px;
@@ -221,17 +230,14 @@ input:focus{
         font-weight: 400;
         font-size: 14px;
         line-height: 18px;
-        color: #333333;
     }
     &__menu-button-name-active{
-        font-weight: 700;
-        color: #444444;
+        color: #ED1D25;
     }
     &__menu-button-number-text{
         font-weight: 400;
         font-size: 14px;
         line-height: 24px;
-        color: #333333;
     }
     &__form-box {
         display: flex;
@@ -364,6 +370,9 @@ input:focus{
         border-radius: 30px;
         cursor: pointer;
         text-transform: uppercase;
+        &_2{
+            font-weight: 700;
+        }
     }
     &__form-question-name {
         font-weight: 400;
@@ -830,9 +839,10 @@ input:focus{
     border: 1px solid #000;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
     .container{
         max-width: 280px;
+        padding: 0;
     }
     .header{
         height: 285px;
@@ -864,6 +874,7 @@ input:focus{
         }
     }
     .main{
+        margin-top: 32px;
         &__box{
             border: 1px solid #000;
             flex-direction: column;
@@ -872,16 +883,19 @@ input:focus{
         }
         &__form-box{
             margin-left: 0;
+            width: 100%;
         }
         &__menu{
             align-items: center;
             width: 280px;
             overflow-x: scroll;
             flex-direction: row;
+            margin-bottom: 40px;
         }
         &__menu-button{
             align-items: start;
             flex-direction: column;
+            margin-bottom: 0;
         }
         &__menu-button-name{
             margin-left: 0;
@@ -912,6 +926,7 @@ input:focus{
             width: 275px;
             font-size: 14px;
             line-height: 17px;
+            margin-bottom: 60px;
         }
         &__form-criteria{
             left: 0;
@@ -919,5 +934,57 @@ input:focus{
             font-size: 12px;
             line-height: 15px;
         }
+        &__form-subtitle{
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 10px;
+        }
+        &__form-input{
+            height: 49px;
+            width: 100%;
+            margin-bottom: 24px;
+            padding: 16px 0 16px 16px;
+        }
+        &__form-input_last{
+            margin-bottom: 0;
+        }
+        &__form-submit-button{
+            margin-top: 40px;
+            width: 100%;
+        }
+        &__form-textarea{
+            width: 100%;
+            padding: 16px 0 0 16px;
+            margin-bottom: 32px;
+        }
+        &__form-textarea::placeholder{
+            width: 200px;
+        }
+        &__form-question-name{
+            font-size: 14px;
+            line-height: 17px;
+        }
+        &__form-idea-checkbox-name{
+            line-height: 18px;
+            width: 180px;
+        }
+        &__form-idea-checkbox-container{
+            margin-bottom: 16px;
+            border: 1px solid #000;
+        }
+    }
+    .custom-select{
+        width: 100%;
+    }
+    .select-box{
+        width: 100%;
+    }
+    .select-items div,.select-selected{
+        height: 49px;
+        width: 100%;
+    }
+    .select-items{
+        height: 49px;
+        width: 100%;
     }
 }
