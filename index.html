@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/imask"></script>
+    <script src="mask.js" defer></script>
     <script src="main.js" defer></script>
     <script src="showfield.js" defer></script>
     <script src="select.js" defer></script>
@@ -89,7 +91,7 @@
                         <p class="main__form-subtitle">ФИО</p>
                         <input autofocus placeholder="Иванов Иван Иванович" type="text" class="main__form-input">
                         <p class="main__form-subtitle">Мобильный телефон</p>
-                        <input placeholder="+7(895) 343-34-56" type="text" class="main__form-input">
+                        <input placeholder="+7(895) 343-34-56" id="phone-mask" type="text" class="main__form-input">
                         <p class="main__form-subtitle">Электронная почта</p>
                         <input placeholder="ivanivanovich@mail.ru" type="text" class="main__form-input main__form-input_last">
                         <button class="main__form-submit-button" id="0">ДАЛЕЕ</button>
@@ -98,11 +100,22 @@
                     <form action="" class="main__form-box_2 main__form-box display-none" name="form" id="1">
                         <p class=" main__form-heading">2. ВАРИАНТЫ СОТРУДНИЧЕСТВА</p>
                         <div class="custom-select" id="0">
-                            <select autofocus class="select-box">
+                            <select autofocus id="select" class="select-box">
                                 <option value="0">Поиск инвестиций (средства на развитие)</option>
                                 <option value="1">Предоставление продуктов для использования на условиях роялти</option>
                                 <option value="2">Продажа проекта/технологии</option>
                                 <option value="3">Поиск нефинансовых ресурсов (компетенций)</option>
+                            </select>
+                            <img src="./images/selectArrow.svg" alt="" class="main__selector-arrow">
+                        </div>
+                        <p class="main__form-subtitle">Область компетенций</p>
+                        <div class="custom-select" id="3">
+                            <select autofocus class="select-box">
+                                <option value="0">производственные услуги (производство продукта, логистика)</option>
+                                <option value="1">индустриальный партнер в получении финансирования от государства (составление бизнес-плана)</option>
+                                <option value="2">сервис (ОПИ, сопровождение)</option>
+                                <option value="3">каналы продаж</option>
+                                <option value="4">лабораторная база (отраслевые испытания, масштабирование, аналитика и составление методик тестирования / определения продукта)</option>
                             </select>
                             <img src="./images/selectArrow.svg" alt="" class="main__selector-arrow">
                         </div>
@@ -243,7 +256,8 @@
                                 <p class="main__form-link-name">Исследования.pdf</p>
                             </a> -->
                             <a href="" class="main__form-link-box main__form-link-box_3">
-                                <p class="main__form-link-name">Выбрать другой файл</p>
+                                <img src="./images/form4Link.svg" alt="" class="main__form-link-img">
+                                <p class="main__form-link-name">Выбрать файл</p>
                             </a>
                         </div>
                         <div class="main__submition-box main__submition-box_main">

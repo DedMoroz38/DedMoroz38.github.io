@@ -18,8 +18,6 @@ allButtons.forEach(elem => {
     });
 });
 
-console.log(allButtons);
-
 function changeDisplay(id){
     let clickedForm = allForms[id];
     clickedForm.classList.add('display-none');

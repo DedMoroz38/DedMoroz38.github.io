@@ -1305,6 +1305,7 @@ input:checked + .slider:before {
     font-size: 14px;
     line-height: 17px;
     margin-bottom: 10px;
+    width: 100%;
   }
   .main__form-input {
     height: 49px;
@@ -1346,10 +1347,22 @@ input:checked + .slider:before {
   }
   .main__form-idea-checkbox-container {
     margin-bottom: 16px;
-    border: 1px solid #000;
+  }
+  .main__form-idea-checkbox-container:last-of-type {
+    margin-bottom: 32px;
+  }
+  .main__switch-box {
+    margin-bottom: 32px;
   }
   .custom-select {
     width: 100%;
+    margin-bottom: 24px;
+  }
+  .custom-select_2 {
+    margin-bottom: 24px;
+  }
+  .custom-select_3 {
+    margin-bottom: 0;
   }
   .select-box {
     width: 100%;
